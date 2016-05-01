@@ -9,7 +9,7 @@
   <meta name="author" content="Your Name">
 
   
-  <meta name="description" content="系统介绍 本人使用的系统为“Porteus v3.0“，一种基于slackware的版本，关于此系统的详细介绍下一篇详述。所以Octopress的体验中遇到的问题是基于本人所使用的系统所做记录。 Setup Octopress 安装ruby，由于本系统软件库中的ruby版本比较低，就采用从源码安装 &hellip;">
+  <meta name="description" content=" Blog Archives Recent Posts ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -64,76 +64,6 @@
       <div class="blog-index">
   
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2016/05/01/octopresschu-ti-yan/">Octopress初体验</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2016-05-01T11:19:19+00:00'><span class='date'><span class='date-month'>May</span> <span class='date-day'>1</span><span class='date-suffix'>st</span>, <span class='date-year'>2016</span></span> <span class='time'>11:19 am</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2 id="system_introduce">系统介绍</h2>
-
-
-<p>本人使用的系统为“Porteus v3.0“，一种基于slackware的版本，关于此系统的详细介绍下一篇详述。所以Octopress的体验中遇到的问题是基于本人所使用的系统所做记录。</p>
-
-<h2 id="setup_octopress">Setup Octopress</h2>
-
-
-<p>安装ruby，由于本系统软件库中的ruby版本比较低，就采用从源码安装。</p>
-
-<p>$ git clone git://github.com/imathis/octopress.git octopress</p>
-
-<p>$ cd octopress</p>
-
-<p>$ gem install bundler</p>
-
-<p>$ bundle install</p>
-
-<p>在执行gem install的时候出现如下错误：ERROR：While executing gem &hellip;(Gem::RemoteFetcher::FetchError) Errno::ECONNRESET:Connection reset by peer-SSL_connect
-有可能ruby sources被墙了，可以设置sources为国内资源。</p>
-
-<p>$ bundle config &lsquo;mirror.<a href="https://rubygems.org">https://rubygems.org</a>&rsquo; &lsquo;<a href="https://ruby.taobao.org">https://ruby.taobao.org</a>&rsquo;</p>
-
-<p>$ rake install</p>
-
-<p>rake aborted!You have already activated rake 10.1.0, but your Gemfile requires rake 10.0.3. Usig bundle exec may solve this.
-解决 gem uninstall rake and remove 10.0.2 version of rake gem</p>
-
-<p>$ gem sources &ndash;remove <a href="https://rubygems.org/">https://rubygems.org/</a></p>
-
-<p>$ gem sources -a <a href="https://ruby.taobao.org/">https://ruby.taobao.org/</a></p>
-
-<p>$ gem sources -l</p>
-
-<p>$ ssh-keygen -t rsa -C &ldquo;<a href="&#x6d;&#97;&#x69;&#108;&#x74;&#x6f;&#x3a;&#121;&#x6f;&#x75;&#x72;&#95;&#x65;&#x6d;&#x61;&#105;&#x6c;&#x40;&#x79;&#x6f;&#x75;&#x65;&#109;&#x61;&#x69;&#108;&#46;&#x63;&#x6f;&#109;">&#121;&#111;&#x75;&#x72;&#95;&#101;&#109;&#x61;&#105;&#108;&#x40;&#x79;&#111;&#117;&#x65;&#x6d;&#97;&#105;&#108;&#x2e;&#x63;&#x6f;&#109;</a>&rdquo;</p>
-
-<p>登录github，修改设置 Add SSH key，添加.ssh/id_rsa内容。</p>
-
-<p>&lsquo;autodetect&rsquo;:Could not find a JavaScript runtime. 可以安装node解决。</p>
-
-<p>Octopress网页加载速度慢的解决方法：
-编辑octopress/source/_includes/head.html，把jquery源地址改为百度的。</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
     <a href="/blog/archives">Blog Archives</a>
@@ -145,10 +75,6 @@
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2016/05/01/octopresschu-ti-yan/">Octopress初体验</a>
-      </li>
     
   </ul>
 </section>
